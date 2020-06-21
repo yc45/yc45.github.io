@@ -21,12 +21,12 @@ body {
 }
 
 #card-front, #card-inside {
-  width: 45%;
+  width: 50%;
   -webkit-box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
   -moz-box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
   box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
   position: absolute;
-  left: 45%;
+  left: 50%;
 }
 
 
@@ -38,7 +38,7 @@ body {
 }
 
 #card {
-    width: 960px;
+    width: 750px;
     margin: 0 auto;
     transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
@@ -77,7 +77,7 @@ body {
 
 p {
     margin-top: 1em;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 p:first-child {
