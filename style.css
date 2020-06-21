@@ -5,13 +5,10 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+
 body {
   background: #E5E5E5;
   padding: 50px;
-}
-
-#card-front {
-
 }
 
 #card, #card-front, #card-inside {
@@ -19,9 +16,10 @@ body {
 }
 
 .wrap {
-    padding: 1.5em 2.5em;
+    padding: 3.5em 2.5em;
     height: 100%;
 }
+
 #card-front, #card-inside {
   width: 50%;
   -webkit-box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
@@ -38,8 +36,9 @@ body {
     -moz-box-shadow: inset 2px 0 1px rgba(0, 0, 0, .05);
     box-shadow: inset 2px 0 1px rgba(0, 0, 0, .05);
 }
+
 #card {
-    max-width: 960px;
+    width: 960px;
     margin: 0 auto;
     transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
@@ -52,16 +51,22 @@ body {
 
 #card h1 {
     text-align: center;
-    font-family: 'Nobile', sans-serif;
+    font-family: "Lucida Console", Monaco, monospace;
     font-style: italic;
-    font-size: 70px;
-    text-shadow:
-        4px 4px 0px rgba(0, 0, 0, .15),
-        1px 1px 0 rgba(255, 200, 200, 255),
-        2px 2px 0 rgba(255, 150, 150, 255),
-        3px 3px 0 rgba(255, 125, 125, 255);
-    color: #FFF;
+    font-size: 30px;
+    letter-spacing: 2px;
+    line-height: 40px;
+    position: relative;
+    margin-top: 110px;
+    background: #fb492c;
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
 #card-inside {
     font-size: 1.1em;
     line-height: 1.4;
@@ -72,6 +77,7 @@ body {
 
 p {
     margin-top: 1em;
+    font-size: 0.9em;
 }
 
 p:first-child {
@@ -80,16 +86,33 @@ p:first-child {
 
 p.signed {
     margin-top: 1.5em;
-    text-align: center;
+    text-align: right;
+    margin-right: 2.1em;
     font-family: 'Dancing Script', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.2em;
+}
+
+p.name {
+    margin-top: -1em;
+    text-align: right;
+    margin-right: 3.3em;
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 1.2em;
+}
+
+p.cake {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-style: italic;
+    font-size: 13px;
+    position: relative;
+    margin-top: 150px;
+    margin-left: -35px;
 }
 
 #card-front {
     background-color: #FF5555;
-    background-image: linear-gradient(top, #FF5555 0%, #FF7777 100%);
-    background-image: -moz-linear-gradient(top, #FF5555 0%, #FF7777 100%);
-    background-image: -webkit-linear-gradient(top, #FF5555 0%, #FF7777 100%);
+    background-image: url("cat.png");
+    background-size: cover;
             transform-origin: left;
        -moz-transform-origin: left;
     -webkit-transform-origin: left;
@@ -133,7 +156,7 @@ p.signed {
 }
 
 #card.open-fully #close,
-#card-open-half #close {
+#card.open-half #close {
   display: inline;
 }
 
@@ -148,9 +171,6 @@ p.signed {
        -moz-transform: rotateY(-90deg);
     -webkit-transform: rotateY(-90deg);
 }
-#card.open-half #card-front .wrap {
-    background-color: rgba(0, 0, 0, .5);
-}
 
 #card.open-fully #card-front,
 #card.close-half #card-front {
@@ -163,21 +183,7 @@ p.signed {
     -webkit-transform: rotateY(-180deg);
 }
 
-#card.open-fully #card-front .wrap {
-    background-color: rgba(0, 0, 0, 0);
-}
-
 #card.open-fully #card-front .wrap *,
 #card.close-half #card-front .wrap * {
    display: none;
-}
-
-footer {
-  max-width: 500px;
-  margin: 40px auto;
-  font-family: 'Nobile', sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
-  color: #888;
-  text-align: center;
 }
